@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    tools:context=".SiswaActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Data Siswa"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <TextView
+        android:id="@+id/nis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="70dp"
+        android:text="NIS"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/judul" />
+
+    <EditText
+        android:id="@+id/input_nis"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Masukkan NIS"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/judul" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:text="Nama"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/nis" />
+
+    <EditText
+        android:id="@+id/input_nama"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="Masukkan Nama"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input_nis" />
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Alamat"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <EditText
+        android:id="@+id/input_alamat"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        android:hint="Masukkan Alamat"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input_nama" />
+
+    <TextView
+        android:id="@+id/hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Handphone"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
+
+    <EditText
+        android:id="@+id/input_hp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="Masukkan Handphone"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input_alamat" />
+
+    <TextView
+        android:id="@+id/ket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Keterangan"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/hp" />
+
+    <EditText
+        android:id="@+id/input_ket"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:hint="Masukkan Keterangan"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/input_hp" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="popupHandler"
+        android:text="OK"
+        android:textColor="#000000"
+        android:background="@color/colorBgbtn"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_ket"
+        app:layout_constraintVertical_bias="0.253" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
